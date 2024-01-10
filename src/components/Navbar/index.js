@@ -3,9 +3,9 @@ import SearchInput from "./SearchInput";
 
 const Navbar = () => {
   return (
-    <header className="bg-gray-800">
-      <div className="flex md:flex-row flex-col justify-between p-4 gap-2">
-        <Link href="/" className="font-bold text-white text-2xl">
+    <header className="bg-gray-700">
+      <div className="flex flex-col justify-between gap-2 p-4 md:flex-row">
+        <Link href="/" className="text-2xl font-bold text-white">
           My Anime List Clone
         </Link>
         <SearchInput />

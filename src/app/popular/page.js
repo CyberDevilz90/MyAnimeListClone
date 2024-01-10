@@ -1,9 +1,11 @@
-const Popular = () => {
-    return (
-        <div>
-            Popular
-        </div>
-    )
+import React from 'react'
+
+const page = () => {
+  return (
+    <div>
+      
+    </div>
+  )
 }
 
-export default Popular
+export default page

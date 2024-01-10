@@ -10,19 +10,21 @@ const SearchInput = () => {
     const searchReff = useRef()
 
     const handleSearch = (event) => {
+      const keyword = searchReff.current.value
+      if (!keyword) return
         event.preventDefault()
-        router.push(`/search/${searchReff.current.value}`)
+        router.push(`/search/${keyword}`)
     }
 
     const handleKeyDown = (event) => {
-      if (event.key === 'Enter') {
+      if (event.key === 'Enter' || event.type === "click") {
         handleSearch(event)
       }
     }
 
   return (
     <div className="relative">
-      <input placeholder="Cari Anime" className="rounded w-full p-2" ref={searchReff} onKeyDown={handleKeyDown}/>
+      <input placeholder="Cari Anime" className="w-full p-2 rounded" ref={searchReff} onKeyDown={handleKeyDown}/>
       <button className="absolute top-2 end-2" onClick={handleSearch}>
         <MagnifyingGlass size={20} />
       </button>
